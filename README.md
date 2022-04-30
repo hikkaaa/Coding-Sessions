@@ -7,3 +7,7 @@ In recent months I have realized that the best way to learn how to code is actua
 
 In my case, I want to get very good at coding in Python. \
 Therefore, I decided to take this path and share my progress "live", step by step, to motivate myself first of all and those who want to start something new in their lives. Good luck, and remember: KNOWLEDGE IS POWER.
+
+## Contents: 
+* **Day 1**: Madlibs
+* **Day 2**: Guess the number
