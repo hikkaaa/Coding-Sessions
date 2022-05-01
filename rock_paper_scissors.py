@@ -3,7 +3,7 @@ import random
 def play():
     # we must have two inputs: the user's choice and the computer's choice
     # ask for user input to know user's choice
-    # used lower() because we want the input to be ok as long as the user types one of the accepted letters (doesn't matter if in upper or lower cases)
+    # used lower() because we want the input to be ok as long as the user types one of the accepted letters (doesn't matter if with upper or lower cases)
     user = (input(" Hello to Rock, Paper, Scissors! Game. \nType 'r' for rock, 'p' for paper or 's' for scissors.\n")).lower()
     # computer's input comes from the random choice between r, p and s 
     # GAME THEORY: The best strategy for this game is nonetheless a random strategy. 
