@@ -12,3 +12,4 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 * **Day 1**: Madlibs
 * **Day 2**: Guess the number
 * **Day 3**: Rock, Paper, Scissors!
+* **Day 4**: Hangman
