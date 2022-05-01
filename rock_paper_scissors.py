@@ -7,7 +7,7 @@ def play():
     user = (input(" Hello to Rock, Paper, Scissors! Game. \nType 'r' for rock, 'p' for paper or 's' for scissors.\n")).lower()
     # computer's input comes from the random choice between r, p and s 
     # GAME THEORY: The best strategy for this game is nonetheless a random strategy. 
-    # This is the strategy the human player use, hence we recreate the same for the computer through random.choice()
+    # This is the strategy the human player uses, hence we recreate the same for the computer through random.choice()
     computer = random.choice(['r', 'p', 's'])
 
     if user == computer:
