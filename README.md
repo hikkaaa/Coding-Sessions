@@ -14,6 +14,7 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 * **Day 3**: Rock, Paper, Scissors!
 * **Day 4**: Hangman
 * **Day 5**: Countdown Timer
-* **Day 6**: QR code encoder/decoder
-* **Day 7**: Sudoku solver
-* **Day 8**: Photo Manipulation in Python
+* **Day 6**: Password Generator
+* **Day 7**: QR code encoder/decoder
+* **Day 8**: Sudoku solver
+* **Day 9**: Photo Manipulation in Python
