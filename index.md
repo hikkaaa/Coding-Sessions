@@ -20,7 +20,11 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 - **Day 8**: Sudoku solver
 - **Day 9**: Photo Manipulation in Python
 
-![image](https://static.vecteezy.com/system/resources/thumbnails/003/430/760/small/cute-pink-unicorn-logo-with-slogan-vector.jpg)
+<center>
+  <img src="https://static.vecteezy.com/system/resources/thumbnails/003/430/760/small/cute-pink-unicorn-logo-with-slogan-vector.jpg">
+</center>
+
+
 
 
 
