@@ -18,7 +18,7 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 - **Day 7**: Sudoku solver
 - **Day 8**: Photo Manipulation in Python
 
-[Image](https://ih1.redbubble.net/image.1071259028.9043/st,small,507x507-pad,600x600,f8f8f8.u1.jpg)
+
 
 
 
