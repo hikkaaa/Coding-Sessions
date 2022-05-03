@@ -1,4 +1,5 @@
-# 100 Days Of Coding
+# <span style="color: pink"> 100 Days Of Coding </span>
+
 Hi, I'm Francesca! :) 
 
 As a fresher AI student, I decided to take on this challenge to become a better version of myself and broaden my horizons! 
@@ -8,7 +9,7 @@ In recent months I have realized that the best way to learn how to code is actua
 In my case, I want to get very good at coding in Python. \
 Therefore, I decided to take this path and share my progress "live", step by step, to motivate myself first of all and those who want to start something new in their lives. Good luck, and remember: KNOWLEDGE IS POWER.
 
-## Contents:
+## <span style="color: pink"> Contents: </span>
 - **Day 1**: [Madlibs](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/madlibs.py)
 - **Day 2**: [Guess the number ](https://github.com/hikkaaa/100-Days-Of-Coding/tree/master/guess_the_number)
 - **Day 3**: [Rock, Paper, Scissors!](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/rock_paper_scissors.py)
