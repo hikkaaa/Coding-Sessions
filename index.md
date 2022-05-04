@@ -15,7 +15,7 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 - **Day 3**: [Rock, Paper, Scissors!](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/rock_paper_scissors.py)
 - **Day 4**: [Hangman](https://github.com/hikkaaa/100-Days-Of-Coding/tree/master/hangman)
 - **Day 5**: [Countdown Timer](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/countdown_timer.py)
-- **Day 6**: Password Generator
+- **Day 6**: [Password Generator](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/password_generator.py)
 - **Day 7**: QR code encoder/decoder
 - **Day 8**: Sudoku solver
 - **Day 9**: Photo Manipulation in Python
