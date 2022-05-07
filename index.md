@@ -18,7 +18,7 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 - **Day 6**: [Password Generator](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/password_generator.py)
 - **Day 7**: [QR code encoder/decoder](https://github.com/hikkaaa/100-Days-Of-Coding/tree/master/QR_Code)
 - **Day 8**: [Sudoku solver](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/sudoku_solver.py)
-- **Day 9**: Photo Manipulation in Python
+- **Day 9**: [Quiz Game]()
 
 <center>
   <img src="https://static.vecteezy.com/system/resources/thumbnails/003/430/760/small/cute-pink-unicorn-logo-with-slogan-vector.jpg">
