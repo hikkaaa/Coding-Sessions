@@ -18,3 +18,4 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 * **Day 7**: QR code encoder/decoder
 * **Day 8**: Sudoku solver
 * **Day 9**: Quiz Game
+* **Day 10**: Photo Manipulation in Python -- Jupyter Notebook tutorial by Muhammad Zubair and PyMoondra
