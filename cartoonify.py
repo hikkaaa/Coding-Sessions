@@ -26,13 +26,12 @@ from tkinter import *
 from PIL import ImageTk, Image
 
 #main window
-top = tk.Tk()
+top=tk.Tk()
 top.geometry('400x400')
-top.title('Cartoonify your image !')
+top.title('Cartoonify Your Image !')
 top.configure(background='white')
-top.mainloop()
-label = Label(top, background= '#CDCDCD', font =('calibri',20,'bold'))
-# filebox opens the box to choose file and help us store file path as string
+label=Label(top,background='#CDCDCD', font=('calibri',20,'bold'))
+
 def upload():
     ImagePath = easygui.fileopenbox()
     cartoonify(ImagePath)
@@ -99,7 +98,7 @@ upload0 = Button(top, text='Cartoonify an Image', command=upload, padx=10, pady=
 upload0.configure(background='#364156', foreground='white', font=('calibri', 10,'bold'))
 upload0.pack(side=TOP, pady=50)
 
-
+top.mainloop()
 
 
 
