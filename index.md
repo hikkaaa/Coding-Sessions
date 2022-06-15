@@ -21,6 +21,7 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 - **Day 9**: [Quiz Game](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/quiz_game.py)
 - **Day 10**: [Photo Manipulation in Python -- Jupyter Notebook tutorial by Muhammad Zubair and PyMoondra](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/Photo%20Manipulation/Photo%20Manipulation%20in%20Python.ipynb)
 - **Day 11**: [Cartoonify an Image!](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/cartoonify_image.py)
+- **Day 12** [Face Recognition (for images)](https://github.com/hikkaaa/100-Days-Of-Coding/tree/master/Face%20Recognition)
 
 <center>
   <img src="https://static.vecteezy.com/system/resources/thumbnails/003/430/760/small/cute-pink-unicorn-logo-with-slogan-vector.jpg">
