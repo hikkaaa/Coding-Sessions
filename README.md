@@ -19,4 +19,5 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 * **Day 8**: Sudoku solver
 * **Day 9**: Quiz Game
 * **Day 10**: Photo Manipulation in Python -- Jupyter Notebook tutorial by Muhammad Zubair and PyMoondra
-* **Day 11** : Face Recognition (for images)
+* **Day 11**: Cartoonify an image!
+* **Day 12** : Face Recognition (for images)
