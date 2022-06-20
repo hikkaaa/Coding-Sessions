@@ -1,8 +1,7 @@
 import cv2
-import sys
 
 # create face cascade 
-cascPath = sys.argv[1]
+cascPath = "haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
 
 # set video source to default webcam (at index 0)
@@ -30,9 +29,16 @@ while True:
 
     # display resulting frame
     cv2.imshow('VIDEO', frame)
-
-    if cv2.waitKey(1) and 0xFF == ord('q'):
+    
+    # click on the window and press Esc to exit
+    k = cv2.waitKey(1)
+    if k == 27:
         break
+    
 
 video_capture.release()
 cv2.destroyAllWindows()
+
+
+
+
