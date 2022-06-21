@@ -21,4 +21,5 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 * **Day 10**: Photo Manipulation in Python -- Jupyter Notebook tutorial by Muhammad Zubair and PyMoondra
 * **Day 11**: Cartoonify an image!
 * **Day 12** : Face Recognition (for images)
-* **Day 13**: Hands Detection
+* **Day 13**: Face Recognition with webcam
+* **Day 14**: Hands Detection
