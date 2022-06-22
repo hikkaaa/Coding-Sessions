@@ -32,22 +32,21 @@ class handTracker():
 
         if self.results.multi_hand_landmarks:
             for handLms in self.results.multi_hand_landmarks:
-
                 if draw:
                     self.mpDraw.draw_landmarks(image, handLms, self.mpHands.HAND_CONNECTIONS)
         return image
     
     # method to find x and y coordinates of each of the 21 hand landmarks
-    def positionFinder(self,image, handNo=0, draw=True):
+    def positionFinder(self,image):
         lmlist = []
         if self.results.multi_hand_landmarks:
-            Hand = self.results.multi_hand_landmarks[handNo]
-            for id, lm in enumerate(Hand.landmark):
-                h,w,c = image.shape
-                cx,cy = int(lm.x*w), int(lm.y*h)
-                lmlist.append([id,cx,cy])
-            if draw:
-                cv2.circle(image,(cx,cy), 7, (255,0,255), cv2.FILLED)
+            for handLms in self.results.multi_hand_landmarks:
+                for id, lm in enumerate(handLms.landmark):
+                    h,w,c = image.shape
+                    cx,cy = int(lm.x*w), int(lm.y*h)
+                    cv2.circle(image,(cx,cy), 5, (255,0,255), cv2.FILLED)
+                    lmlist.append([id,cx,cy])
+            
 
         return lmlist
 # define main method to identify and track hands
@@ -61,6 +60,9 @@ def main():
         lmList = tracker.positionFinder(image)
         if len(lmList) != 0:
             print(lmList)
+        
+        cv2.namedWindow("Video", cv2.WINDOW_NORMAL)   
+        cv2.resizeWindow("Video", 1800, 1000)
 
         cv2.imshow("Video",image)
         k = cv2.waitKey(1)
