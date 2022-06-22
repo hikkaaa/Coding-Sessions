@@ -24,6 +24,7 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 - **Day 12**: [Face Recognition (for images)](https://github.com/hikkaaa/100-Days-Of-Coding/tree/master/Face%20Recognition)
 - **Day 13**: [Face Recognition with webcam](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/FACE_DETECTION/face_recognition_webcam/facerecognition_webcam.py)
 - **Day 14**: [Hands Detection](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/hand_detection.py)
+- **Day 15**: [Hands Detection (module)](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/handtracking_module.py)
 
 <center>
   <img src="https://static.vecteezy.com/system/resources/thumbnails/003/430/760/small/cute-pink-unicorn-logo-with-slogan-vector.jpg">
