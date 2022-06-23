@@ -24,4 +24,5 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 * **Day 13**: Face Recognition with webcam
 * **Day 14**: Hands Detection
 * **Day 15**: Hands Detection Module
+* **Day 16**: Pose Estimation 
 
