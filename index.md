@@ -28,6 +28,7 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 - **Day 16**: [Pose Estimation](https://github.com/hikkaaa/100-Days-Of-Coding/tree/master/POSE_ESTIMATION)
 - **Day 17**: [Pose Estimation Module](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/POSE_ESTIMATION/pose_estimation_module.py)
 - **Day 18**: [Face Recognition with webcam Module](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/FACE_DETECTION/face_recognition_webcam/face_recognition_module.py)
+- **Day 19**: [Face Mesh](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/FACE_DETECTION/face_mesh.py)
 
 <center>
   <img src="https://static.vecteezy.com/system/resources/thumbnails/003/430/760/small/cute-pink-unicorn-logo-with-slogan-vector.jpg">
