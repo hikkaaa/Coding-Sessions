@@ -1,7 +1,7 @@
 import cv2
 
 # create face cascade 
-cascPath = "haarcascade_frontalface_default.xml"
+cascPath = "FACE_DETECTION/face_recognition_webcam/haarcascade_frontalface_default.xml"
 faceCascade = cv2.CascadeClassifier(cascPath)
 
 # set video source to default webcam (at index 0)
