@@ -9,7 +9,9 @@ import time
 cap = cv2.VideoCapture(0)
 
 # initialize mediapipe
+# draw detected face landmarks on image 
 mpDraw = mp.solutions.drawing_utils
+# DrawingSpec() allows us to customize how mediapipe draws detected face landmarks 
 DrawSpec = mpDraw.DrawingSpec(thickness=1, circle_radius=1)
 mpFaceMesh = mp.solutions.face_mesh
 faceMesh = mpFaceMesh.FaceMesh(max_num_faces=3)
@@ -28,6 +30,8 @@ while True:
     # check if face mesh is detected
     if results.multi_face_landmarks:
         for faceLms in results.multi_face_landmarks:
+            # if you find tutorials where they use mpFaceMesh.FACE_CONNECTIONS
+            # be aware that the latest python version uses mpFaceMesh.FACEMESH_CONTOURS
             mpDraw.draw_landmarks(img, faceLms, mpFaceMesh.FACEMESH_CONTOURS, 
                                 DrawSpec, DrawSpec)
             # for loop to get hand landmark information (coordinates x and y) and id of each point
