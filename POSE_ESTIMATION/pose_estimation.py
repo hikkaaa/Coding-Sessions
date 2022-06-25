@@ -3,7 +3,7 @@ import mediapipe as mp
 import time
 
 # create video object
-cap = cv2.VideoCapture('3.mp4')
+cap = cv2.VideoCapture('POSE_ESTIMATION/POSE_VIDEOS/4.mp4')
 
 # initialize mediapipe
 mpPose = mp.solutions.pose
