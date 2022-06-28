@@ -29,4 +29,6 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 * **Day 18**: Face Recognition with webcam Module
 * **Day 19**: Face Mesh 
 * **Day 20**: Face Mesh Module
+* **Day 21**: Gesture Volume Control 
+
 
