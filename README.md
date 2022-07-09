@@ -32,5 +32,6 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 * **Day 21**: Gesture Volume Control 
 * **Day 22**: Fingers Counter (only for right hand)
 * **Day 23**: Fingers Counter (for right or left hand!)
+* **Day 24**: AI Personal Trainer
 
 
