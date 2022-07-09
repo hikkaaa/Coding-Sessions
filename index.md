@@ -32,6 +32,8 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 - **Day 20**: [Face Mesh Module](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/FACE_DETECTION/FACE_MESH/face_mesh_module.py)
 - **Day 21**: [Gesture Volume Control](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/volume_gesture_control.py)
 - **Day 22**: [Fingers Counter](https://github.com/hikkaaa/100-Days-Of-Coding/tree/master/FINGERS_COUNTER)
+- **Day 23**: [Fingers Counter for right or left hand](https://github.com/hikkaaa/100-Days-Of-Coding/tree/master/FINGERS_COUNTER/4%20_both_hands_counter)
+- **Day 24**: [AI Personal Trainer](https://github.com/hikkaaa/100-Days-Of-Coding/blob/master/POSE_ESTIMATION/AI_Trainer.py)
 
 <center>
   <img src="https://static.vecteezy.com/system/resources/thumbnails/003/430/760/small/cute-pink-unicorn-logo-with-slogan-vector.jpg">
