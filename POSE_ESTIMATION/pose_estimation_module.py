@@ -35,15 +35,16 @@ class PoseDetector:
         return image
     
     # method to find x and y coordinates of each pose_landmarks
-    def positionFinder(self, image):
+    def positionFinder(self, image, draw):
         self.lmList = []
         if self.results.pose_landmarks:
             for id, lm in enumerate(self.results.pose_landmarks.landmark):
                 h,w,c = image.shape
                 cx, cy = int(lm.x * w), int(lm.y * h)
-                self.lmList.append([id, cx, cy])
-                cv2.circle(image, (cx, cy), 10, (255, 0, 255), cv2.FILLED)              
-            self.mpDraw.draw_landmarks(image, self.results.pose_landmarks, self.mpPose.POSE_CONNECTIONS)
+                self.lmList.append([id, cx, cy]) 
+            if draw == True:  
+                cv2.circle(image, (cx, cy), 10, (255, 0, 255), cv2.FILLED)            
+                self.mpDraw.draw_landmarks(image, self.results.pose_landmarks, self.mpPose.POSE_CONNECTIONS)
         
         return self.lmList 
     # method to calculate angle 
@@ -84,7 +85,7 @@ def main():
     while True:
         success,image = cap.read()
         image = detector.findPose(image)
-        lmList = detector.positionFinder(image)
+        lmList = detector.positionFinder(image, draw=True)
         if len(lmList) != 0:
             print(lmList)
         
