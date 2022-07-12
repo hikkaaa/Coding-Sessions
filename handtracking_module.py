@@ -22,6 +22,7 @@ class handTracker():
         self.hands = self.mpHands.Hands(self.mode, self.maxHands,self.modelComplex,
                                         self.detectionCon, self.trackCon)
         self.mpDraw = mp.solutions.drawing_utils
+        self.tipIds = [4, 8, 12, 16, 20]
     
     # method to locate hands
     def handsFinder(self,image,draw=True):
@@ -37,18 +38,44 @@ class handTracker():
         return image
     
     # method to find x and y coordinates of each of the 21 hand landmarks
-    def positionFinder(self,image):
-        lmlist = []
+    def positionFinder(self,image, draw=True):
+        self.lmlist = []
         if self.results.multi_hand_landmarks:
             for handLms in self.results.multi_hand_landmarks:
                 for id, lm in enumerate(handLms.landmark):
-                    h,w,c = image.shape
-                    cx,cy = int(lm.x*w), int(lm.y*h)
-                    cv2.circle(image,(cx,cy), 5, (255,0,255), cv2.FILLED)
-                    lmlist.append([id,cx,cy])
+                        h,w,c = image.shape
+                        cx,cy = int(lm.x*w), int(lm.y*h)
+                        if draw == True:
+                            cv2.circle(image,(cx,cy), 5, (255,0,255), cv2.FILLED)
+                        self.lmlist.append([id,cx,cy])
             
 
-        return lmlist
+        return self.lmlist
+    
+    def fingersUp(self):
+        # initialize a list that will indicate how many fingers are open
+        fingers = []
+        
+        # for loop to iterate over finger tips (from index to pinky finger)
+        for id in range(1,5):
+        # because we are using the open cv orientation, upper means lower value 
+        # [2] = we are working on the y-axis (upper or lower value)
+            if self.lmlist[self.tipIds[id]][2] < self.lmlist[self.tipIds[id]-2][2]:
+                fingers.append(1)
+            else: 
+                fingers.append(0)
+                
+        # for the thumb it is different since the tip never goes below the other landmarks of the finger
+        # the solution is to observe if the thumb tip is at the left of the below landmark
+        # in this case, we would say that the thumb is closed
+        # [1] = working on x-axis (right or left value)
+        if self.lmlist[self.tipIds[0]][1] < self.lmlist[self.tipIds[0]-1][1]:
+            fingers.append(1)
+        else: 
+            fingers.append(0)
+            
+        return fingers 
+        
 # define main method to identify and track hands
 def main():
     cap = cv2.VideoCapture(0)
