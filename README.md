@@ -33,5 +33,6 @@ Therefore, I decided to take this path and share my progress "live", step by ste
 * **Day 22**: Fingers Counter (only for right hand)
 * **Day 23**: Fingers Counter (for right or left hand!)
 * **Day 24**: AI Personal Trainer
+* **Day 25**: AI Virtual Painter 
 
 
