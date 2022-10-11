@@ -1,0 +1,40 @@
+@prefix ns1: <http://example.com/kad/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ns1:KlayThompson rdfs:label "Klay Thompson"@en ;
+    ns1:PlayIn ns1:NBA ;
+    ns1:PlaysFor ns1:GoldenStateWarriors .
+
+ns1:LebronJames rdfs:label "LebronJames"@en ;
+    ns1:PlayIn ns1:NBA ;
+    ns1:PlayedIn ns1:DavidsonWildcats,
+        ns1:MiamHeat,
+        ns1:RealMadrid,
+        ns1:WashingtonStateCougars ;
+    ns1:PlaysFor ns1:Lakers ;
+    ns1:Won ns1:NBAFinalsMVP .
+
+ns1:LukaDoncic rdfs:label "Luka Doncic"@en ;
+    ns1:PlayIn ns1:NBA ;
+    ns1:Won ns1:EuroLeagueMVP .
+
+ns1:PlayedIn rdfs:domain ns1:nba ;
+    rdfs:range ns1:PlayedFor .
+
+ns1:PlaysFor rdfs:domain ns1:nba ;
+    rdfs:range ns1:Player .
+
+ns1:StephenCurry rdfs:label "Stephen Curry"@en ;
+    ns1:PlayIn ns1:NBA ;
+    ns1:PlaysFor ns1:GoldenStateWarriors ;
+    ns1:Won ns1:NBAFinalsMVP .
+
+ns1:Won rdfs:domain ns1:nba ;
+    rdfs:range ns1:Award .
+
+ns1:PlayedFor rdfs:subClassOf ns1:Team .
+
+ns1:Player rdfs:subClassOf ns1:Team .
+
+ns1:NBA rdfs:type ns1:BasketballLeague .
+

@@ -1,0 +1,50 @@
+@prefix ex: <http://example.com/kad/> .
+@prefix ns1: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+ex:Netherlands a ex:Country ;
+    ex:contains ex:Ijsselmeer ;
+    ex:containsCity ex:Rotterdam ;
+    ex:hasCapital ex:Amsterdam ;
+    ex:hasName "The Netherlands" ;
+    ex:neighbours ex:Belgium .
+
+ex:hasCapital rdfs:range ex:Capital ;
+    rdfs:subPropertyOf ex:containsCity .
+
+ex:neighbours rdfs:subPropertyOf ex:closeBy .
+
+ex:Amsterdam a ex:Capital ;
+    ex:closeBy ex:Germany ;
+    ns1:lat "52.3667" ;
+    ns1:long "4.9" ;
+    ns1:populationTotal "872680" .
+
+ex:Belgium a ex:Country .
+
+ex:Berlin ns1:lat "52.52" ;
+    ns1:long "13.405" ;
+    ns1:populationTotal "3769495" .
+
+ex:EuropeanCountry rdfs:subClassOf ex:Country .
+
+ex:Germany a ex:EuropeanCountry ;
+    ex:hasCapital ex:Berlin .
+
+ex:Rotterdam ns1:lat "51.9167" ;
+    ns1:long "4.5" ;
+    ns1:populationTotal "651157" .
+
+ex:closeBy rdfs:domain ex:Location ;
+    rdfs:range ex:Location .
+
+ex:containsCity rdfs:domain ex:Country ;
+    rdfs:range ex:City ;
+    rdfs:subPropertyOf ex:contains .
+
+ex:Capital rdfs:subClassOf ex:City .
+
+ex:City rdfs:subClassOf ex:Location .
+
+ex:Country rdfs:subClassOf ex:Location .
+

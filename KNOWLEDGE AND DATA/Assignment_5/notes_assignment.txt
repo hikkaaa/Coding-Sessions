@@ -1,0 +1,19 @@
+** FINAL PROJECT **
+- check example projects on CANVAS (reading the examples should be enough to be able to do the assignment)
+
+- deadlines 14-21-28
+
+- motivation and description = explain design choices for ontology (ex. because it is easier or bc it fits better)
+
+-compile document in Latex (send on group chat template to choose for final one)
+- for inferences = take screenshot (from Macbook otherwise it's shit)
+- conceptualization = visualization of the ontology (with a diagram and tables (for object and data properties)
+
+
+DATA REUSE: datasets found on the web related to the topic
+
+REASONING: 
+screenshot of our axiom --> screenshot of related inferences
+
+
+* INCLUDE APPENDIX for extra queries (not relevant to main story but still a contribution)

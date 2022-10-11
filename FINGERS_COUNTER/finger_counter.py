@@ -16,7 +16,7 @@ detector = htm.handTracker(detectionCon= 0.75)
 # import our images
 # to store them we will use os
 # os.listdir to list all the elements in that directory
-folderPath = "COUNT"
+folderPath = "FINGERS_COUNTER\COUNT"
 myList = os.listdir(folderPath)
 # now overlay this image over main image
 overlayList = []

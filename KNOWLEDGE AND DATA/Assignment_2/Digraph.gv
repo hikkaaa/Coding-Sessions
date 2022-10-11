@@ -1,0 +1,123 @@
+strict digraph {
+	graph [dpi=52]
+	1 [label=Capital]
+	2 [label="rdf-schema#subClassOf"]
+	3 [label=City]
+	Capital -> "rdf-schema#subClassOf"
+	"rdf-schema#subClassOf" -> City
+	1 [label=Belgium]
+	2 [label="22-rdf-syntax-ns#hasCapital"]
+	3 [label=Brussel]
+	Belgium -> "22-rdf-syntax-ns#hasCapital"
+	"22-rdf-syntax-ns#hasCapital" -> Brussel
+	1 [label=Germany]
+	2 [label="22-rdf-syntax-ns#hasName"]
+	3 [label=Germany]
+	Germany -> "22-rdf-syntax-ns#hasName"
+	"22-rdf-syntax-ns#hasName" -> Germany
+	1 [label=France]
+	2 [label="22-rdf-syntax-ns#type"]
+	3 [label=Country]
+	France -> "22-rdf-syntax-ns#type"
+	"22-rdf-syntax-ns#type" -> Country
+	1 [label=Netherlands]
+	2 [label=neighbours]
+	3 [label=Belgium]
+	Netherlands -> neighbours
+	neighbours -> Belgium
+	1 [label=France]
+	2 [label="22-rdf-syntax-ns#hasCapital"]
+	3 [label=Paris]
+	France -> "22-rdf-syntax-ns#hasCapital"
+	"22-rdf-syntax-ns#hasCapital" -> Paris
+	1 [label=EuropeanCountry]
+	2 [label="rdf-schema#subClassOf"]
+	3 [label=Country]
+	EuropeanCountry -> "rdf-schema#subClassOf"
+	"rdf-schema#subClassOf" -> Country
+	1 [label=containsCity]
+	2 [label="rdf-schema#domain"]
+	3 [label=Country]
+	containsCity -> "rdf-schema#domain"
+	"rdf-schema#domain" -> Country
+	1 [label=hasCapital]
+	2 [label="rdf-schema#subPropertyOf"]
+	3 [label=containsCity]
+	hasCapital -> "rdf-schema#subPropertyOf"
+	"rdf-schema#subPropertyOf" -> containsCity
+	1 [label=hasCapital]
+	2 [label="rdf-schema#range"]
+	3 [label=Capital]
+	hasCapital -> "rdf-schema#range"
+	"rdf-schema#range" -> Capital
+	1 [label=Germany]
+	2 [label="22-rdf-syntax-ns#type"]
+	3 [label=EuropeanCountry]
+	Germany -> "22-rdf-syntax-ns#type"
+	"22-rdf-syntax-ns#type" -> EuropeanCountry
+	1 [label=Netherlands]
+	2 [label="22-rdf-syntax-ns#type"]
+	3 [label=Country]
+	Netherlands -> "22-rdf-syntax-ns#type"
+	"22-rdf-syntax-ns#type" -> Country
+	1 [label=Netherlands]
+	2 [label=hasCapital]
+	3 [label=Amsterdam]
+	Netherlands -> hasCapital
+	hasCapital -> Amsterdam
+	1 [label=Germany]
+	2 [label="22-rdf-syntax-ns#Neighbours"]
+	3 [label=France]
+	Germany -> "22-rdf-syntax-ns#Neighbours"
+	"22-rdf-syntax-ns#Neighbours" -> France
+	1 [label=Amsterdam]
+	2 [label="22-rdf-syntax-ns#type"]
+	3 [label=Capital]
+	Amsterdam -> "22-rdf-syntax-ns#type"
+	"22-rdf-syntax-ns#type" -> Capital
+	1 [label=France]
+	2 [label="22-rdf-syntax-ns#hasName"]
+	3 [label=France]
+	France -> "22-rdf-syntax-ns#hasName"
+	"22-rdf-syntax-ns#hasName" -> France
+	1 [label=Belgium]
+	2 [label="22-rdf-syntax-ns#Neighbours"]
+	3 [label=France]
+	Belgium -> "22-rdf-syntax-ns#Neighbours"
+	"22-rdf-syntax-ns#Neighbours" -> France
+	1 [label=Belgium]
+	2 [label="22-rdf-syntax-ns#type"]
+	3 [label=Country]
+	Belgium -> "22-rdf-syntax-ns#type"
+	"22-rdf-syntax-ns#type" -> Country
+	1 [label=Belgium]
+	2 [label="22-rdf-syntax-ns#hasName"]
+	3 [label=Belgium]
+	Belgium -> "22-rdf-syntax-ns#hasName"
+	"22-rdf-syntax-ns#hasName" -> Belgium
+	1 [label=France]
+	2 [label="22-rdf-syntax-ns#Neighbours"]
+	3 [label=Spain]
+	France -> "22-rdf-syntax-ns#Neighbours"
+	"22-rdf-syntax-ns#Neighbours" -> Spain
+	1 [label=containsCity]
+	2 [label="rdf-schema#range"]
+	3 [label=City]
+	containsCity -> "rdf-schema#range"
+	"rdf-schema#range" -> City
+	1 [label=Germany]
+	2 [label="22-rdf-syntax-ns#type"]
+	3 [label=Country]
+	Germany -> "22-rdf-syntax-ns#type"
+	"22-rdf-syntax-ns#type" -> Country
+	1 [label=Netherlands]
+	2 [label=hasName]
+	3 [label="The Netherlands"]
+	Netherlands -> hasName
+	hasName -> "The Netherlands"
+	1 [label=Germany]
+	2 [label="22-rdf-syntax-ns#hasCapital"]
+	3 [label=Berlin]
+	Germany -> "22-rdf-syntax-ns#hasCapital"
+	"22-rdf-syntax-ns#hasCapital" -> Berlin
+}

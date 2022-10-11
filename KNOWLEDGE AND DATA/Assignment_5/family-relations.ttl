@@ -1,0 +1,336 @@
+@prefix : <http://www.semanticweb.org/francesca/familly-relations#> .
+@prefix st: <http://www.semanticweb.org/francesca/familly-relations/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/francesca/familly-relations> .
+
+<http://www.semanticweb.org/francesca/familly-relations> rdf:type owl:Ontology ;
+                                                          rdfs:comment "This is a family-tracking ontology that can infer basic family relations. I chose this theme because I was fascinated by the several applications this could have: from the detection and investigation field to the healthcare one. In particular, for the latter, a further development of this ontology could be useful regarding the communications in case of emergency. The ontology would be able to infer  the family members geographically nearer to the patient, with specified relationship and their full names." .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/francesca/familly-relations/BloodRelation-Of
+st:BloodRelation-Of rdf:type owl:ObjectProperty ;
+                    owl:inverseOf st:Has-BloodRelation ;
+                    rdfs:label "BloodRelation-Of"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Daughter-Of
+st:Daughter-Of rdf:type owl:ObjectProperty ;
+               owl:inverseOf st:Has-Daughter ;
+               rdf:type owl:IrreflexiveProperty ;
+               rdfs:label "Daughter-Of"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Grandparent-Of
+st:Grandparent-Of rdf:type owl:ObjectProperty ;
+                  owl:inverseOf st:Has-Grandparent ;
+                  rdfs:label "Grandparent-Of"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Has-BloodRelation
+st:Has-BloodRelation rdf:type owl:ObjectProperty ;
+                     rdfs:domain owl:Thing ;
+                     rdfs:range owl:Thing ;
+                     rdfs:label "Has-BloodRelation"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Has-Daughter
+st:Has-Daughter rdf:type owl:ObjectProperty ;
+                rdfs:domain owl:Thing ;
+                rdfs:range owl:Thing ;
+                rdfs:label "Has-Daughter"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Has-Grandparent
+st:Has-Grandparent rdf:type owl:ObjectProperty ;
+                   rdfs:domain owl:Thing ;
+                   rdfs:range owl:Thing ;
+                   rdfs:label "Has-Grandparent"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Has-Parent
+st:Has-Parent rdf:type owl:ObjectProperty ;
+              owl:inverseOf st:ParentOf ;
+              rdfs:domain owl:Thing ;
+              rdfs:range owl:Thing ;
+              rdfs:label "Has-Parent"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Has-Son
+st:Has-Son rdf:type owl:ObjectProperty ;
+           owl:inverseOf st:Son-Of ;
+           rdf:type owl:AsymmetricProperty ,
+                    owl:IrreflexiveProperty ;
+           rdfs:domain owl:Thing ;
+           rdfs:range owl:Thing ;
+           rdfs:label "Has-Son"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Has-Spouse
+st:Has-Spouse rdf:type owl:ObjectProperty ;
+              owl:inverseOf st:Spouse-Of ;
+              rdf:type owl:FunctionalProperty ,
+                       owl:SymmetricProperty ;
+              rdfs:domain owl:Thing ;
+              rdfs:range st:Spouse ;
+              rdfs:label "Has-Spouse"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/ParentOf
+st:ParentOf rdf:type owl:ObjectProperty ;
+            rdfs:label "Parent-Of"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Son-Of
+st:Son-Of rdf:type owl:ObjectProperty ;
+          rdfs:label "Son-Of"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Spouse-Of
+st:Spouse-Of rdf:type owl:ObjectProperty ,
+                      owl:SymmetricProperty ;
+             rdfs:label "Spouse-Of"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/francesca/familly-relations/HasLegalStatus
+st:HasLegalStatus rdf:type owl:DatatypeProperty ;
+                  rdfs:domain owl:Thing ;
+                  rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/LivesIn
+st:LivesIn rdf:type owl:DatatypeProperty ;
+           rdfs:domain owl:Thing ;
+           rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/hasFullName
+st:hasFullName rdf:type owl:DatatypeProperty ;
+               rdfs:domain owl:Thing ;
+               rdfs:range xsd:string ;
+               rdfs:label "hasFullName"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/francesca/familly-relations/Child
+st:Child rdf:type owl:Class ;
+         owl:equivalentClass [ rdf:type owl:Class ;
+                               owl:unionOf ( st:Daughter
+                                             st:Son
+                                             [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty st:Has-Parent ;
+                                                                      owl:someValuesFrom st:Father
+                                                                    ]
+                                                                    [ rdf:type owl:Restriction ;
+                                                                      owl:onProperty st:Has-Parent ;
+                                                                      owl:someValuesFrom st:Mother
+                                                                    ]
+                                                                  ) ;
+                                               rdf:type owl:Class
+                                             ]
+                                           )
+                             ] .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Daughter
+st:Daughter rdf:type owl:Class ;
+            rdfs:subClassOf st:Child ;
+            rdfs:label "Daughter"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Father
+st:Father rdf:type owl:Class ;
+          rdfs:subClassOf st:Parent .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Grandfather
+st:Grandfather rdf:type owl:Class ;
+               rdfs:subClassOf st:Grandparent ;
+               rdfs:label "Grandfather"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Grandmother
+st:Grandmother rdf:type owl:Class ;
+               rdfs:subClassOf st:Grandparent ;
+               rdfs:label "Grandmother"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Grandparent
+st:Grandparent rdf:type owl:Class ;
+               owl:equivalentClass [ rdf:type owl:Class ;
+                                     owl:unionOf ( st:Grandfather
+                                                   st:Grandmother
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty st:Grandparent-Of ;
+                                                     owl:someValuesFrom owl:Thing
+                                                   ]
+                                                 )
+                                   ] ;
+               rdfs:label "Grandparent"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Husband
+st:Husband rdf:type owl:Class ;
+           rdfs:subClassOf st:Spouse ;
+           rdfs:label "Husband"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Mother
+st:Mother rdf:type owl:Class ;
+          rdfs:subClassOf st:Parent ;
+          rdfs:label "Mother"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Parent
+st:Parent rdf:type owl:Class ;
+          rdfs:label "Parent"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Son
+st:Son rdf:type owl:Class ;
+       rdfs:subClassOf st:Child ;
+       rdfs:label "Son"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Spouse
+st:Spouse rdf:type owl:Class ;
+          rdfs:label "Spouse"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Wife
+st:Wife rdf:type owl:Class ;
+        rdfs:subClassOf st:Spouse ;
+        rdfs:label "Wife"@en .
+
+
+###  http://www.w3.org/2002/07/owl#Thing
+owl:Thing rdfs:label "FamilyTree"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/francesca/familly-relations/Alessandro
+st:Alessandro rdf:type owl:NamedIndividual ;
+              st:Has-Grandparent st:Rosa ;
+              st:HasLegalStatus "Unmarried" ;
+              st:LivesIn "Brindisi (Italy)" ;
+              st:hasFullName "Alessandro Rossi" ;
+              rdfs:label "Alessandro"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Alessia
+st:Alessia rdf:type owl:NamedIndividual ;
+           st:Has-Grandparent st:Rosa ;
+           st:HasLegalStatus "Unmarried" ;
+           st:LivesIn "Brindisi (Italy)" ;
+           st:hasFullName "Alessia Rossi" ;
+           rdfs:label "Alessia"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Angela
+st:Angela rdf:type owl:NamedIndividual ;
+          st:Has-BloodRelation st:Alessandro ;
+          st:Has-Parent st:Franco ,
+                        st:Rosa ;
+          st:HasLegalStatus "Married" ;
+          rdfs:label "Angela"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Enrico
+st:Enrico rdf:type owl:NamedIndividual ,
+                   st:Father ,
+                   st:Husband ;
+          st:Has-Daughter st:Giulia ;
+          st:Has-Son st:Michele ;
+          st:HasLegalStatus "Married" ;
+          rdfs:label "Enrico"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Franco
+st:Franco rdf:type owl:NamedIndividual ,
+                   st:Father ,
+                   st:Grandfather ;
+          st:Grandparent-Of st:Giulia ;
+          st:hasFullName "Franco Polcino" ;
+          rdfs:label "Franco"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Giulia
+st:Giulia rdf:type owl:NamedIndividual ,
+                   st:Daughter ;
+          st:Has-BloodRelation st:Michele ;
+          st:Has-Grandparent st:Maria ;
+          st:Has-Parent st:Enrico ,
+                        st:Valeria ;
+          st:LivesIn "Rome" ;
+          rdfs:label "Giulia"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Maria
+st:Maria rdf:type owl:NamedIndividual ;
+         st:Grandparent-Of st:Michele ;
+         st:ParentOf st:Enrico ;
+         st:HasLegalStatus "Married" ;
+         rdfs:label "Maria"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Michele
+st:Michele rdf:type owl:NamedIndividual ,
+                    st:Son ;
+           st:Son-Of st:Valeria ;
+           st:LivesIn "Rome" ;
+           rdfs:label "Michele"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/MicheleSenior
+st:MicheleSenior rdf:type owl:NamedIndividual ;
+                 st:Grandparent-Of st:Giulia ;
+                 st:HasLegalStatus "Married" ;
+                 rdfs:label "MicheleSenior"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Piero
+st:Piero rdf:type owl:NamedIndividual ;
+         st:Has-Spouse st:Angela ;
+         st:hasFullName "Piero Urgese" ;
+         rdfs:label "Piero"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Rosa
+st:Rosa rdf:type owl:NamedIndividual ,
+                 st:Grandmother ,
+                 st:Mother ;
+        st:Grandparent-Of st:Giulia ;
+        st:HasLegalStatus "Widow" ;
+        st:LivesIn "Brindisi (Italy)" ;
+        rdfs:label "Rosa"@en .
+
+
+###  http://www.semanticweb.org/francesca/familly-relations/Valeria
+st:Valeria rdf:type owl:NamedIndividual ,
+                    st:Mother ,
+                    st:Wife ;
+           st:Has-Parent st:Franco ,
+                         st:Rosa ;
+           st:Has-Son st:Michele ;
+           st:HasLegalStatus "Married" ;
+           st:LivesIn "Rome" ;
+           rdfs:label "Valeria"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

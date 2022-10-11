@@ -1,0 +1,26 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix dbr: <http://dbpedia.org/resource/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ex: <http://example.com/kad/> .
+
+
+ex:Netherlands rdf:type ex:Country .
+ex:Belgium rdf:type ex:Country .
+ex:Netherlands ex:hasName "The Netherlands" .
+ex:Netherlands ex:neighbours ex:Belgium .
+ex:Netherlands ex:hasCapital ex:Amsterdam .
+ex:Amsterdam rdf:type ex:Capital .
+
+ex:Germany rdf:type ex:EuropeanCountry .
+
+ex:Capital rdfs:subClassOf ex:City .
+
+ex:EuropeanCountry rdfs:subClassOf ex:Country .
+
+ex:containsCity rdfs:domain ex:Country ;
+                rdfs:range ex:City .
+
+ex:hasCapital rdfs:subPropertyOf ex:containsCity ;
+              rdfs:range ex:Capital .
+

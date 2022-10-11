@@ -1,0 +1,123 @@
+strict digraph {
+	graph [dpi=52]
+	1 [label=Capital]
+	2 [label=subClassOf]
+	3 [label=City]
+	Capital -> subClassOf
+	subClassOf -> City
+	1 [label=Belgium]
+	2 [label=hasCapital]
+	3 [label=Brussel]
+	Belgium -> hasCapital
+	hasCapital -> Brussel
+	1 [label=Germany]
+	2 [label=hasName]
+	3 [label=Germany]
+	Germany -> hasName
+	hasName -> Germany
+	1 [label=France]
+	2 [label=type]
+	3 [label=Country]
+	France -> type
+	type -> Country
+	1 [label=Netherlands]
+	2 [label=neighbours]
+	3 [label=Belgium]
+	Netherlands -> neighbours
+	neighbours -> Belgium
+	1 [label=France]
+	2 [label=hasCapital]
+	3 [label=Paris]
+	France -> hasCapital
+	hasCapital -> Paris
+	1 [label=EuropeanCountry]
+	2 [label=subClassOf]
+	3 [label=Country]
+	EuropeanCountry -> subClassOf
+	subClassOf -> Country
+	1 [label=containsCity]
+	2 [label=domain]
+	3 [label=Country]
+	containsCity -> domain
+	domain -> Country
+	1 [label=hasCapital]
+	2 [label=subPropertyOf]
+	3 [label=containsCity]
+	hasCapital -> subPropertyOf
+	subPropertyOf -> containsCity
+	1 [label=hasCapital]
+	2 [label=range]
+	3 [label=Capital]
+	hasCapital -> range
+	range -> Capital
+	1 [label=Germany]
+	2 [label=type]
+	3 [label=EuropeanCountry]
+	Germany -> type
+	type -> EuropeanCountry
+	1 [label=Netherlands]
+	2 [label=type]
+	3 [label=Country]
+	Netherlands -> type
+	type -> Country
+	1 [label=Netherlands]
+	2 [label=hasCapital]
+	3 [label=Amsterdam]
+	Netherlands -> hasCapital
+	hasCapital -> Amsterdam
+	1 [label=Germany]
+	2 [label=Neighbours]
+	3 [label=France]
+	Germany -> Neighbours
+	Neighbours -> France
+	1 [label=Amsterdam]
+	2 [label=type]
+	3 [label=Capital]
+	Amsterdam -> type
+	type -> Capital
+	1 [label=France]
+	2 [label=hasName]
+	3 [label=France]
+	France -> hasName
+	hasName -> France
+	1 [label=Belgium]
+	2 [label=Neighbours]
+	3 [label=France]
+	Belgium -> Neighbours
+	Neighbours -> France
+	1 [label=Belgium]
+	2 [label=type]
+	3 [label=Country]
+	Belgium -> type
+	type -> Country
+	1 [label=Belgium]
+	2 [label=hasName]
+	3 [label=Belgium]
+	Belgium -> hasName
+	hasName -> Belgium
+	1 [label=France]
+	2 [label=Neighbours]
+	3 [label=Spain]
+	France -> Neighbours
+	Neighbours -> Spain
+	1 [label=containsCity]
+	2 [label=range]
+	3 [label=City]
+	containsCity -> range
+	range -> City
+	1 [label=Germany]
+	2 [label=type]
+	3 [label=Country]
+	Germany -> type
+	type -> Country
+	1 [label=Netherlands]
+	2 [label=hasName]
+	3 [label="The Netherlands"]
+	Netherlands -> hasName
+	hasName -> "The Netherlands"
+	1 [label=Germany]
+	2 [label=hasCapital]
+	3 [label=Berlin]
+	Germany -> hasCapital
+	hasCapital -> Berlin
+}
