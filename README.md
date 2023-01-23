@@ -1,4 +1,4 @@
-# 100 Days Of Coding
+# Coding Sessions
 Hi, I'm Francesca! :) 
 
 As a fresher AI student, I decided to take on this challenge to become a better version of myself and broaden my horizons! 
